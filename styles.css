@@ -1,0 +1,121 @@
+/* import the fonts used for the dialogue and options  */
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+@import url(https://fonts.googleapis.com/css?family=Unica+One);
+
+html, body {
+  margin: auto;
+  width: 100%;
+  background-color: rgb(7, 7, 36);
+}
+
+footer {
+  padding: 3rem 1.5rem 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  color: white;
+  font-size: 4em;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* container for everything */
+.container {
+  width: 50%;
+
+  /* downsizing by 1/4 */
+  zoom: 0.25;
+  -moz-transform: scale(0.25);
+
+  /* centering container */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+#portrait {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+#blinker {
+  visibility: hidden;
+  float: right;
+
+  max-width: 10%;
+  height: auto;
+}
+
+.dialogueBox {
+  border: 10px solid white;
+  border-radius: 30px;
+  height: 100vh;
+  margin: 2%;
+
+  /* prevent overflow */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: rgb(20, 20, 222);
+}
+
+.dialogueBox p {
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  font-size: 4vw;
+  line-height: 2;
+  margin: 50px;
+}
+
+.dialogueBox p:before {
+  content: "> ";
+}
+
+.dialogueBox a {
+  color: white;
+}
+
+#dialogueText {
+  white-space: pre-wrap;
+}
+
+.uiButtons {
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  /* wrap buttons responsively */
+  flex-flow: wrap;
+}
+
+.uiButtons button {
+  color: white;
+  font-size: 7vw;
+  font-family: "Unica One", cursive;
+
+  /* fancy button styling */
+  background: none;
+  border: 4px solid white;
+  margin: 20px;
+  padding: 40px;
+  height: inherit;
+  width: 23%;
+
+  background-color: rgb(20, 20, 222);;
+}
+
+/* keep the buttons on one line*/
+.uiButtons button span {
+  display: inline-block;
+}
+
+.uiButtons button:hover {
+  border-color: rgb(20, 20, 222);
+  color: rgb(20, 20, 222);
+  background-color: white;
+}
